@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #667eea;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    color: white;
+}
+
+.score-item {
+    text-align: center;
+}
+
+.score-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.score {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.result-area {
+    text-align: center;
+    margin-bottom: 30px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#resultText {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+#resultText.win {
+    color: #10b981;
+    animation: bounce 0.5s;
+}
+
+#resultText.lose {
+    color: #ef4444;
+    animation: shake 0.5s;
+}
+
+#resultText.draw {
+    color: #f59e0b;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.choice-btn {
+    background: white;
+    border: 3px solid #667eea;
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.choice-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: #667eea;
+}
+
+.choice-btn:hover .emoji {
+    transform: scale(1.2);
+}
+
+.choice-btn:hover .label {
+    color: white;
+}
+
+.choice-btn:active {
+    transform: translateY(-2px);
+}
+
+.emoji {
+    font-size: 3rem;
+    transition: transform 0.3s ease;
+}
+
+.label {
+    font-weight: bold;
+    color: #667eea;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.move-display {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f3f4f6;
+    border-radius: 15px;
+}
+
+.move-item {
+    text-align: center;
+}
+
+.move-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.move-emoji {
+    font-size: 4rem;
+    animation: fadeIn 0.5s;
+}
+
+.vs {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.reset-btn {
+    width: 100%;
+    padding: 15px;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.reset-btn:hover {
+    background: #dc2626;
+    transform: scale(1.02);
+}
+
+.reset-btn:active {
+    transform: scale(0.98);
+}
+
+footer {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .choices {
+        flex-direction: column;
+    }
+
+    .choice-btn {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .emoji {
+        font-size: 2rem;
+    }
+
+    .move-emoji {
+        font-size: 3rem;
+    }
+}

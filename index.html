@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Rock Paper Scissors</h1>
+            <p class="subtitle">Challenge the Computer!</p>
+        </header>
+
+        <div class="scoreboard">
+            <div class="score-item">
+                <h3>You</h3>
+                <p class="score" id="playerScore">0</p>
+            </div>
+            <div class="score-item">
+                <h3>Computer</h3>
+                <p class="score" id="computerScore">0</p>
+            </div>
+        </div>
+
+        <div class="result-area">
+            <p id="resultText">Make your move!</p>
+        </div>
+
+        <div class="choices">
+            <button class="choice-btn" data-choice="rock">
+                <span class="emoji">🪨</span>
+                <span class="label">Rock</span>
+            </button>
+            <button class="choice-btn" data-choice="paper">
+                <span class="emoji">📄</span>
+                <span class="label">Paper</span>
+            </button>
+            <button class="choice-btn" data-choice="scissors">
+                <span class="emoji">✂️</span>
+                <span class="label">Scissors</span>
+            </button>
+        </div>
+
+        <div class="move-display">
+            <div class="move-item">
+                <p class="move-label">Your Move</p>
+                <p class="move-emoji" id="playerMove">❓</p>
+            </div>
+            <div class="vs">VS</div>
+            <div class="move-item">
+                <p class="move-label">Computer Move</p>
+                <p class="move-emoji" id="computerMove">❓</p>
+            </div>
+        </div>
+
+        <button class="reset-btn" id="resetBtn">Reset Game</button>
+
+        <footer>
+            <p>Created by <a href="https://github.com/EbubeMkparu" target="_blank">@EbubeMkparu</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
